@@ -6,11 +6,10 @@ import lombok.Getter;
 
 import java.time.LocalDateTime;
 
-@Getter
 public record TransactionEvent(
-        String description,
-        LocalDateTime date,
-        TransactionStatus status,
-        PaymentMethod paymentMethod
+    String description,
+    LocalDateTime date,
+    TransactionStatus status,
+    PaymentMethod paymentMethod
 ) {
 }

@@ -18,14 +18,30 @@ public class Subscriber {
   private String name;
 
   @Setter
+  private String email;
+
+  @Setter
   private Address address;
+
+  private Contract contract;
+
+  private String partnerId;
 
   public Subscriber(
           UUID id,
-          String name
+          String name,
+          String email,
+          Address address,
+          Contract contract
   ) {
     this.id = id;
     this.name = name;
+    this.email = email;
+    this.address = address;
+    this.contract = contract;
+  }
 
+  public void linkPartner(String partnerId) {
+    this.partnerId = partnerId;
   }
 }

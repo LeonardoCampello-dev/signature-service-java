@@ -19,10 +19,10 @@ public class Plan {
   private int orderFeePercentage;
 
   public Plan(
-          UUID id,
-          String publicName,
-          double price,
-          int orderFeePercentage
+      UUID id,
+      String publicName,
+      double price,
+      int orderFeePercentage
   ) {
     this.id = id;
     this.publicName = publicName;
@@ -32,11 +32,11 @@ public class Plan {
   }
 
   public Plan(
-          UUID id,
-          String publicName,
-          String privateName,
-          double price,
-          int orderFeePercentage
+      UUID id,
+      String publicName,
+      String privateName,
+      double price,
+      int orderFeePercentage
   ) {
     this.id = id;
     this.publicName = publicName;

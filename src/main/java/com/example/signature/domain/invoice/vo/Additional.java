@@ -11,17 +11,17 @@ public class Additional {
   private String collectorId;
 
   public Additional(
-          String description,
-          BigDecimal price
+      String description,
+      BigDecimal price
   ) {
     this.description = description;
     this.price = price;
   }
 
   public Additional(
-          String description,
-          BigDecimal price,
-          String collectorId
+      String description,
+      BigDecimal price,
+      String collectorId
   ) {
     this.description = description;
     this.price = price;

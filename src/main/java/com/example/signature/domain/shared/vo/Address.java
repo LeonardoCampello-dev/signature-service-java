@@ -17,13 +17,13 @@ public class Address {
   private final String zipCode;
 
   public Address(
-          String street,
-          String number,
-          String neighborhood,
-          String city,
-          String state,
-          String zipCode,
-          Optional<String> complement
+      String street,
+      String number,
+      String neighborhood,
+      String city,
+      String state,
+      String zipCode,
+      String complement
   ) {
     if (zipCode.length() < 8)
       throw new RuntimeException("zip code must contain eight digits");
@@ -35,6 +35,6 @@ public class Address {
     this.state = state;
     this.zipCode = zipCode;
 
-    complement.ifPresent(s -> this.complement = s);
+    if (complement != null) this.complement = complement;
   }
 }

@@ -15,8 +15,8 @@ public class TransactionHistory {
   private final List<TransactionEvent> events = new ArrayList<>();
 
   public TransactionHistory(
-          UUID id,
-          UUID invoiceId
+      UUID id,
+      UUID invoiceId
   ) {
     this.id = id;
     this.invoiceId = invoiceId;

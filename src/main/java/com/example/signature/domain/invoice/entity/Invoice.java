@@ -27,9 +27,9 @@ public class Invoice {
   private LocalDateTime paidAt;
 
   public Invoice(
-          UUID id,
-          Integer sequentialId,
-          BigDecimal contractPrice
+      UUID id,
+      Integer sequentialId,
+      BigDecimal contractPrice
   ) {
     this.id = id;
     this.sequentialId = sequentialId;
@@ -50,13 +50,15 @@ public class Invoice {
 
   public void toErrorStatus() {
     if (this.isError()) return;
-    if (this.isPaid()) throw new RuntimeException("paid status cannot be changed");
+    if (this.isPaid())
+      throw new RuntimeException("paid status cannot be changed");
 
     this.status = InvoiceStatus.ERROR;
   }
 
   public void toPaidStatus(PaymentMethod paymentMethod) {
-    if (this.isPaid()) throw new RuntimeException("invoice has already been paid");
+    if (this.isPaid())
+      throw new RuntimeException("invoice has already been paid");
 
     if (paymentMethod == null) {
       throw new RuntimeException("payment method must be provided for paid invoice");

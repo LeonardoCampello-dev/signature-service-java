@@ -10,9 +10,9 @@ public class CreditCard extends PaymentMethod {
   private final String cvv;
 
   public CreditCard(
-          String flag,
-          String finalFourDigits,
-          String cvv
+      String flag,
+      String finalFourDigits,
+      String cvv
   ) {
     super(PaymentMethodType.CREDIT_CARD);
 
